@@ -1,14 +1,166 @@
+@font-face {
+  font-family: HelveticaNeueLTStd-ThCn; /* Имя шрифта */
+  src: url(fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThCn.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: MyriadPro-Regular; /* Имя шрифта */
+  src: url(fonts/MyriadPro/MyriadPro-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: OpenSans; /* Имя шрифта */
+  src: url(fonts/OpenSans/OpenSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: OpenSans-Light; /* Имя шрифта */
+  src: url(fonts/OpenSans/OpenSans-Light.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: OpenSans-Italic; /* Имя шрифта */
+  src: url(fonts/OpenSans/OpenSans-Italic.ttf); /* Путь к файлу со шрифтом */
+}
+
+.contact {
+  overflow: hidden;
+  background: no-repeat center/cover url("images/Layer 30@1X.png");
+  position: relative;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.contact .content {
+  padding-top: 100px;
+}
+
+.contact .call-us,
+.contact .send-message {
+  text-transform: uppercase;
+  font-family: HelveticaNeueLTStd-ThCn, OpenSans-Light, AdobeInvisFont,
+    MyriadPro-Regular;
+  color: #e76122;
+  text-align: center;
+}
+
+.contact .call-us {
+  font-size: 48px;
+}
+
+.contact .send-message {
+  font-size: 30px;
+  padding-top: 29px;
+}
+
+.contact .adress,
+.contact .text {
+  color: #ffffff;
+  font-family: OpenSans-Light, OpenSans-Italic, AdobeInvisFont,
+    MyriadPro-Regular;
+  text-align: center;
+}
+
+.contact .adress {
+  font-size: 18px;
+  padding-top: 18px;
+  padding-bottom: 21px;
+}
+
+.contact .text {
+  font-size: 14px;
+  padding-top: 23px;
+  padding-bottom: 31px;
+  font-style: italic;
+}
+
+.contact .social {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social .fb,
+.social .twitter,
+.social .linkedin,
+.social .pinterest {
+  font-size: 16px;
+  width: 41px;
+  height: 41px;
+  border-radius: 20px;
+  position: relative;
+  text-decoration: none;
   overflow: hidden;
 }
 
-.form-style {
-  font: 13px Arial, Helvetica, sans-serif;
-
+.social .fb i,
+.social .twitter i,
+.social .linkedin i,
+.social .pinterest i {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+.social .fb a,
+.social .twitter a,
+.social .linkedin a,
+.social .pinterest a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social .fb {
+  background-color: #5378bc;
+}
+.social .twitter {
+  background-color: #36d0f7;
+}
+.social .linkedin {
+  background-color: #007ab5;
+}
+.social .pinterest {
+  background-color: #e92a2a;
+}
+
+.social .fb:hover {
+  background-color: #436097;
+}
+.social .twitter:hover {
+  background-color: #2fb3d4;
+}
+.social .linkedin:hover {
+  background-color: #015883;
+}
+.social .pinterest:hover {
+  background-color: #c52323;
+}
+
+.form-style {
+  font: 14px OpenSans, AdobeInvisFont, MyriadPro-Regular;
 }
 
 .inputs-wrapper {
@@ -51,19 +203,16 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   border: 1px solid #c2c2c2;
-  box-shadow: 1px 1px 4px #ebebeb;
-  -moz-box-shadow: 1px 1px 4px #ebebeb;
-  -webkit-box-shadow: 1px 1px 4px #ebebeb;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   padding: 15px;
   outline: none;
 }
 
 .form-style .input-field:focus,
 .form-style .textarea-field:focus {
-  border: 1px solid #0c0;
+  border: 1px solid #5dbdb1;
 }
 
 .form-style .textarea-field {
@@ -73,28 +222,69 @@
 
 .form-style input[type="submit"],
 .form-style input[type="button"] {
+  font-size: 16px;
   text-transform: uppercase;
   border: none;
-  padding: 15px 45px;
-  background: #60bdb3;
+  padding: 14px 36px;
+  background: #5dbdb1;
   color: #fff;
-  box-shadow: 1px 1px 4px #dadada;
-  -moz-box-shadow: 1px 1px 4px #dadada;
-  -webkit-box-shadow: 1px 1px 4px #dadada;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
 }
 
-.form-style input[type="submit"]:hover,
-.form-style input[type="button"]:hover {
-  background: #43837c;
+.form-style input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(69, 138, 130);
   color: #fff;
 }
 
+.dashed-line {
+  height: 2px;
+  background-image: linear-gradient(
+    90deg,
+    #ffffff,
+    #ffffff 70%,
+    transparent 70%,
+    transparent 100%
+  );
+  background-size: 40px 2px;
+  border: none;
+}
+
+.contact .dashed-line {
+  margin-top: 100px;
+}
+
+.contact .tm-name-moto {
+  padding-top: 23px;
+  color: #ffffff;
+  font-family: OpenSans, OpenSans-Italic, AdobeInvisFont, MyriadPro-Regular;
+  font-size: 13px;
+  text-align: center;
+}
+
+.contact .arrow-up {
+  padding-top: 75px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 380px) {
+  .contact .call-us .number {
+    font-size: 38px;
+  }
+}
+
 @media only screen and (max-width: 767.9px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   .form-style {
-    width: 90vw;
+    width: 100%;
     padding: 20px 0;
   }
 
@@ -105,11 +295,23 @@
   .inputs-wrapper label:nth-child(3) {
     padding-bottom: 15px;
   }
+
+  .contact .call-us {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .form-style {
-    width: 80vw;
+  .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .form-style,
+  .content .text {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .inputs-wrapper,
@@ -121,8 +323,16 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
 @media only screen and (min-width: 1224px) {
-  .form-style {
-    width: 60vw;
+  .container {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }
