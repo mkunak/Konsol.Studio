@@ -23,9 +23,14 @@
   src: url(fonts/OpenSans/OpenSans-Italic.ttf); /* Путь к файлу со шрифтом */
 }
 
+body, html {
+  height: 100%;
+}
+
 .contact {
   overflow: hidden;
   background: no-repeat center/cover url("images/Layer 30@1X.png");
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -336,3 +341,4 @@
     padding-right: 20%;
   }
 }
+
